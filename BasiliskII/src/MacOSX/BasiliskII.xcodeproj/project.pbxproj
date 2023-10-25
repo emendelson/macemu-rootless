@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		28EFB21E2364DB4F00988A5B /* video_rootless.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28EFB21C2364DB4F00988A5B /* video_rootless.cpp */; };
 		28EFB222236CE16F00988A5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EFB221236CE16F00988A5B /* QuartzCore.framework */; };
+		2BF68CAA2AE88D6700B1F740 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF68CA92AE88D6700B1F740 /* SDL2.framework */; };
+		2BF68CAB2AE88DF100B1F740 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF68CA92AE88D6700B1F740 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D5C3B0A24B2DF3500CDAB41 /* bincue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D5C3B0924B2DF3400CDAB41 /* bincue.cpp */; };
 		752F26F91F240E51001032B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752F26F81F240E51001032B4 /* Foundation.framework */; };
 		752F26FB1F240E69001032B4 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752F26FA1F240E69001032B4 /* IOKit.framework */; };
@@ -80,7 +82,6 @@
 		E413D93620D260DA00E437D8 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E413D93520D260DA00E437D8 /* SDL2.framework */; };
 		E413D93820D2613500E437D8 /* ether_unix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E413D93720D2613500E437D8 /* ether_unix.cpp */; };
 		E413D93A20D2614E00E437D8 /* extfs_macosx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E413D93920D2614E00E437D8 /* extfs_macosx.cpp */; };
-		E4150D1420D559800077C51A /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4150D1320D559800077C51A /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E416BEE82410AA4E00751E6D /* runtool.c in Sources */ = {isa = PBXBuildFile; fileRef = E416BEE72410AA4E00751E6D /* runtool.c */; };
 		E416BEEA2410AA9800751E6D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E416BEE92410AA9800751E6D /* Security.framework */; };
 		E416BEED2410AE0900751E6D /* etherhelpertool in Resources */ = {isa = PBXBuildFile; fileRef = E416BEEC2410AE0000751E6D /* etherhelpertool */; };
@@ -127,7 +128,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E4150D1420D559800077C51A /* SDL2.framework in Embed Frameworks */,
+				2BF68CAB2AE88DF100B1F740 /* SDL2.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +138,7 @@
 /* Begin PBXFileReference section */
 		28EFB21C2364DB4F00988A5B /* video_rootless.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = video_rootless.cpp; sourceTree = "<group>"; };
 		28EFB221236CE16F00988A5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2BF68CA92AE88D6700B1F740 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		5D5C3B0924B2DF3400CDAB41 /* bincue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bincue.cpp; path = ../bincue.cpp; sourceTree = "<group>"; };
 		5D5C3B0B24B2DF4200CDAB41 /* bincue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bincue.h; sourceTree = "<group>"; };
 		5DDE95122255D075004D0E79 /* AudioBackEnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioBackEnd.h; sourceTree = "<group>"; };
@@ -311,10 +313,9 @@
 		E413D91E20D260BC00E437D8 /* if.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = if.c; sourceTree = "<group>"; };
 		E413D91F20D260BC00E437D8 /* cksum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cksum.c; sourceTree = "<group>"; };
 		E413D92020D260BC00E437D8 /* tcp_output.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tcp_output.c; sourceTree = "<group>"; };
-		E413D93520D260DA00E437D8 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		E413D93520D260DA00E437D8 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
 		E413D93720D2613500E437D8 /* ether_unix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ether_unix.cpp; sourceTree = "<group>"; };
 		E413D93920D2614E00E437D8 /* extfs_macosx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = extfs_macosx.cpp; sourceTree = "<group>"; };
-		E4150D1320D559800077C51A /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		E416BEE72410AA4E00751E6D /* runtool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = runtool.c; sourceTree = "<group>"; };
 		E416BEE92410AA9800751E6D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E416BEEB2410AB0E00751E6D /* etherhelpertool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = etherhelpertool.c; sourceTree = "<group>"; };
@@ -337,6 +338,7 @@
 				752F26FB1F240E69001032B4 /* IOKit.framework in Frameworks */,
 				E447066D25D8FCB400EA2C14 /* Metal.framework in Frameworks */,
 				752F26F91F240E51001032B4 /* Foundation.framework in Frameworks */,
+				2BF68CAA2AE88D6700B1F740 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +421,7 @@
 			children = (
 				E45769A82643A65B0063BAF1 /* uae_cpu.xcodeproj */,
 				E45769B52643A6740063BAF1 /* uae_cpu_2021.xcodeproj */,
-				E4150D1320D559800077C51A /* SDL2.framework */,
+				2BF68CA92AE88D6700B1F740 /* SDL2.framework */,
 				7539E1E41F23B25E006B2DF2 /* src */,
 				753252FF1F535E5D0024025B /* generated src */,
 				7539DFB31F23B17E006B2DF2 /* Products */,
@@ -941,7 +943,7 @@
 					../uae_cpu,
 					../UNIX,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -996,7 +998,7 @@
 					../uae_cpu,
 					../UNIX,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -1020,7 +1022,8 @@
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					Frameworks,
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_CW_ASM_SYNTAX = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
@@ -1041,16 +1044,8 @@
 				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				"HEADER_SEARCH_PATHS[arch=arm64]" = (
-					/Library/Frameworks/SDL2.framework/Headers,
-					../MacOSX,
-					../include,
-					../uae_cpu_2021,
-					../Unix,
-					../slirp,
-				);
-				"HEADER_SEARCH_PATHS[arch=x86_64]" = (
-					/Library/Frameworks/SDL2.framework/Headers,
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					Frameworks/SDL2.framework/Headers,
 					../MacOSX,
 					../include,
 					../uae_cpu,
@@ -1104,7 +1099,8 @@
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					Frameworks,
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_CW_ASM_SYNTAX = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
@@ -1126,16 +1122,8 @@
 				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				"HEADER_SEARCH_PATHS[arch=arm64]" = (
-					/Library/Frameworks/SDL2.framework/Headers,
-					../MacOSX,
-					../include,
-					../uae_cpu_2021,
-					../Unix,
-					../slirp,
-				);
-				"HEADER_SEARCH_PATHS[arch=x86_64]" = (
-					/Library/Frameworks/SDL2.framework/Headers,
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					Frameworks/SDL2.framework/Headers,
 					../MacOSX,
 					../include,
 					../uae_cpu,
