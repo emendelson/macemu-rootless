@@ -719,17 +719,21 @@ static bool init_sdl()
 	atexit(SDL_Quit);
 
 #if SDL_VERSION_ATLEAST(2, 0, 0)
-#if !SDL_VERSION_ATLEAST(3, 0, 0)
-#define SDL_EVENT_DROP_FILE	SDL_DROPFILE
-#endif
 	const int SDL_EVENT_TIMEOUT = 100;
 	for (int i = 0; i < SDL_EVENT_TIMEOUT; i++) {
 		SDL_Event event;
 		SDL_PollEvent(&event);
+#if SDL_VERSION_ATLEAST(3, 0, 0)
 		if (event.type == SDL_EVENT_DROP_FILE) {
+			sdl_vmdir = event.drop.data;
+			break;
+		}
+#else
+		if (event.type == SDL_DROPFILE) {
 			sdl_vmdir = event.drop.file;
 			break;
 		}
+#endif
 		SDL_Delay(1);
 	}
 #endif
@@ -1434,6 +1438,7 @@ static void *nvram_func(void *arg)
  *  60Hz thread (really 60.15Hz)
  */
 
+bool tick_inhibit;
 static void *tick_func(void *arg)
 {
 	int tick_counter = 0;
@@ -1450,6 +1455,7 @@ static void *tick_func(void *arg)
 			Delay_usec(delay);
 		else if (delay < -16625)
 			next = GetTicks_usec();
+		if (tick_inhibit) continue;
 		ticks++;
 
 #if !EMULATED_PPC
